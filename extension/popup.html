@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FocusForge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+
+    <h2>FocusForge 🚀</h2>
+    <p class="subtitle">Build Your Focus. Eliminate Distractions.</p>
+
+    <label>Focus Mode</label>
+    <select id="mode" class="input">
+      <option value="deep">Deep Work Session</option>
+      <option value="daily">Daily Limit Mode</option>
+    </select>
+
+
+    <label>Discipline Level</label>
+    <select id="intensityMode" class="input">
+      <option value="soft">Balanced (Recommended)</option>
+      <option value="strict">Strict (No Interruptions)</option>
+    </select>
+
+
+    <!-- QUICK SITES -->
+    <label>Quick Block</label>
+
+    <div class="quick-sites">
+
+      <label class="site-chip">
+        <input type="checkbox" value="youtube.com"> YouTube
+      </label>
+
+      <label class="site-chip">
+        <input type="checkbox" value="instagram.com"> Instagram
+      </label>
+
+      <label class="site-chip">
+        <input type="checkbox" value="facebook.com"> Facebook
+      </label>
+
+      <label class="site-chip">
+        <input type="checkbox" value="netflix.com"> Netflix
+      </label>
+
+      <label class="site-chip">
+        <input type="checkbox" value="reddit.com"> Reddit
+      </label>
+
+      <label class="site-chip">
+        <input type="checkbox" value="hotstar.com"> Hotstar
+      </label>
+
+    </div>
+
+
+    <!-- CUSTOM SITE -->
+    <label>Add Custom Site</label>
+
+    <div class="site-input-row">
+      <input type="text" id="siteInput" placeholder="Enter website (e.g. netflix.com)">
+      <button id="addSiteBtn">+</button>
+    </div>
+
+    <ul id="siteList"></ul>
+
+
+    <!-- Deep Mode -->
+    <div id="deepSection" class="section">
+
+      <label>Focus Session Duration</label>
+
+      <div class="time-box">
+        <button id="deepDecrease">−</button>
+        <span id="deepDisplay">1 hr</span>
+        <button id="deepIncrease">+</button>
+      </div>
+
+    </div>
+
+
+    <!-- Daily Mode -->
+    <div id="dailySection" class="section" style="display:none">
+
+      <label>Daily Distraction Limit</label>
+
+      <div class="time-box">
+        <button id="dailyDecrease">−</button>
+        <span id="dailyDisplay">1 hr</span>
+        <button id="dailyIncrease">+</button>
+      </div>
+
+    </div>
+
+
+    <div class="button-row">
+
+      <button id="startFocus" class="start-btn">▶ Start Focus</button>
+      <button id="endFocus" class="stop-btn">⏹ End Session</button>
+
+    </div>
+
+    <button id="emergencyUnlock" class="unlock-btn">
+      🚨 Emergency Unlock (5 min)
+    </button>
+     
+    <p id="streak">🔥 0 Day Focus Streak</p>
+
+    <p id="status">Ready to Focus 💡</p>
+
+  </div>
+
+  <script src="popup.js"></script>
+
+  <!-- OTP MODAL -->
+  <div id="otpModal" class="otp-modal hidden">
+  <div class="otp-box">
+    <h3>End Session Verification</h3>
+
+    <input type="email" id="otpEmail" placeholder="Enter your email" />
+
+    <div id="otpSection" class="hidden">
+      <input type="text" id="otpInput" placeholder="Enter OTP" />
+    </div>
+
+    <div class="otp-buttons">
+      <button id="sendOtpBtn">Send OTP</button>
+      <button id="verifyOtpBtn" class="hidden">Verify</button>
+      <button id="cancelOtpBtn">Cancel</button>
+    </div>
+
+    <p id="otpStatus"></p>
+  </div>
+</div>
+
+</body>
+</html>
