@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "FocusForge",
+  "version": "1.0",
+  "description": "Smart Focus Productivity Extension",
+
+  "permissions": ["storage", "tabs", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html", "blocked.css", "blocked.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
